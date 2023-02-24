@@ -1,3 +1,33 @@
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Term:
+ *       type: object
+ *       required:
+ *         - title
+ *         - author
+ *         - finished
+ *       properties:
+ *         _id:
+ *           type: string
+ *           description: The auto-generated id of the term
+ *         term:
+ *           type: string
+ *           description: The title of the term
+ *         normalized:
+ *           type: string
+ *           description: The normalized title of the term
+ *         meaning:
+ *           type: string
+ *           description: The meaning of the term
+ *       example:
+ *         id: 63f8e16a0f5e1a1f24d1ec95
+ *         term: non-parametric (statistics)
+ *         normalized: non-parametric (statistics)
+ *         meaning: A branch of statistical tests which do not assume a known distribution of the population which the samples were taken from (Kruskal-Wallis and Dunn test are examples of non-parametric tests).
+ */
+
 const express = require("express");
 const router = express.Router();
 const Term = require("../lib/database/models/Term");
