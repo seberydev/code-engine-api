@@ -1,5 +1,198 @@
 /**
  * @swagger
+ * tags:
+ *   name: Terms
+ *   description: The terms managing API
+ * /api/search?search=yourSearch:
+ *   get:
+ *     summary: Get list of terms that are related to the search by title
+ *     tags: [Terms]
+ *     parameters:
+ *       - name: search
+ *         in: path
+ *         description: search
+ *         required: true
+ *         schema:
+ *          type: string
+ *     responses:
+ *       200:
+ *         description: List of terms that are related to the search by title.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Term'
+ *       500:
+ *         description: Server error
+ * /api/search-one?search=yourSearch:
+ *   get:
+ *     summary: Get the first term that is related to the search by title
+ *     tags: [Terms]
+ *     parameters:
+ *       - name: search
+ *         in: path
+ *         description: search
+ *         required: true
+ *         schema:
+ *          type: string
+ *     responses:
+ *       200:
+ *         description: First term that is related to the search by title.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Term'
+ *       500:
+ *         description: Server error
+ * /api/description?search=yourSearch:
+ *   get:
+ *     summary: Get list of terms that are related to the search by description
+ *     tags: [Terms]
+ *     parameters:
+ *       - name: search
+ *         in: path
+ *         description: search
+ *         required: true
+ *         schema:
+ *          type: string
+ *     responses:
+ *       200:
+ *         description: List of terms that are related to the search by description.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Term'
+ *       500:
+ *         description: Server error
+ * /api/description-one?search=yourSearch:
+ *   get:
+ *     summary: Get the first term that matches the search by description
+ *     tags: [Terms]
+ *     parameters:
+ *       - name: search
+ *         in: path
+ *         description: search
+ *         required: true
+ *         schema:
+ *          type: string
+ *     responses:
+ *       200:
+ *         description: First term that matches the search by description.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Term'
+ *       500:
+ *         description: Server error
+ * /api/title?search=yourSearch:
+ *   get:
+ *     summary: Get only titles from a list of terms that are related to the title search
+ *     tags: [Terms]
+ *     parameters:
+ *       - name: search
+ *         in: path
+ *         description: search
+ *         required: true
+ *         schema:
+ *          type: string
+ *     responses:
+ *       200:
+ *         description: Only titles from a list of terms that are related to the title search.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Term'
+ *       500:
+ *         description: Server error
+ * /api/title-one?search=yourSearch:
+ *   get:
+ *     summary: Get the first title that is related to the search by title
+ *     tags: [Terms]
+ *     parameters:
+ *       - name: search
+ *         in: path
+ *         description: search
+ *         required: true
+ *         schema:
+ *          type: string
+ *     responses:
+ *       200:
+ *         description: First title that is related to the search by title.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Term'
+ *       500:
+ *         description: Server error
+ * /api/description-title?search=yourSearch:
+ *   get:
+ *     summary: Get only descriptions from a list of terms that are related to the title search
+ *     tags: [Terms]
+ *     parameters:
+ *       - name: search
+ *         in: path
+ *         description: search
+ *         required: true
+ *         schema:
+ *          type: string
+ *     responses:
+ *       200:
+ *         description: Only descriptions from a list of terms that are related to the title search.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Term'
+ *       500:
+ *         description: Server error
+ * /api/description-title-one?search=yourSearch:
+ *   get:
+ *     summary: Get the first description that matches the search by title
+ *     tags: [Terms]
+ *     parameters:
+ *       - name: search
+ *         in: path
+ *         description: search
+ *         required: true
+ *         schema:
+ *          type: string
+ *     responses:
+ *       200:
+ *         description: First description that matches the search by title.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Term'
+ *       500:
+ *         description: Server error
+ * /api/random:
+ *   get:
+ *     summary: Get a list of random terms
+ *     tags: [Terms]
+ *     responses:
+ *       200:
+ *         description: List of random terms.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Term'
+ *       500:
+ *         description: Server error
+ * /api/random-one:
+ *   get:
+ *     summary: Get a random term
+ *     tags: [Terms]
+ *     responses:
+ *       200:
+ *         description: Random term.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Term'
+ *       500:
+ *         description: Server error
+ */
+
+/**
+ * @swagger
  * components:
  *   schemas:
  *     Term:
