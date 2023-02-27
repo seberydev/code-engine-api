@@ -11,6 +11,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
+var hbs = require("hbs");
 
 var indexRouter = require("./routes/index");
 var apiRouter = require("./routes/api");
@@ -46,6 +47,7 @@ app.use(
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
+hbs.registerPartials(__dirname + "/views/partials");
 
 app.use(logger("dev"));
 app.use(express.json());
