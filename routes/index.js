@@ -6,7 +6,7 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "Code Engine" });
 });
 
-router.get("/mysearch", function (req, res, next) {
+router.get("/mysearchs", function (req, res, next) {
   res.render("userSearch", { title: "My Searchs" });
 });
 
