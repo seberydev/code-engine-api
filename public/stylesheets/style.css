@@ -1,61 +1,133 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: #343d46;
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+input{
+    outline: none;
+    border: none;
+    font-size: larger;
+}
+/* ---------- Header ---------- */
+
+#header{
+    background-color: #393E46;
+    height: 90px;
+    width: 100%;
+    font-weight: lighter;
+}
+#header-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.headers{
+    list-style: none;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    max-width: 100px;
+    max-height: 100px;
+}
+.left-header{
+    flex:1;
+}
+.right-header{
+    flex:4;
+    justify-content: start;
+    gap: 50px;
+}
+.headers-list{
+ /* existo por si las dudas*/
+   color: rebeccapurple;
 }
 
-a {
-  color: #00B7FF;
+/* ---------- Header End ---------- */
+/* ---------- Body ---------- */
+#body{
+    background-color: #222831;
+    height: 75vh;
 }
-.box{
-  margin: 100px auto;
-  width: 300px;
-  height: 50px;
+#main{
+    height: 100%;
+    width: 100%;
+    color: white;
 }
-.container-4{
-  overflow: hidden;
-  width: 300px;
-  vertical-align: middle;
-  white-space: nowrap;
+#main-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.container-4 input#search{
-  width: 300px;
-  height: 50px;
-  background: #2b303b;
-  border: none;
-  font-size: 10pt;
-  float: left;
-  color: #fff;
-  padding-left: 15px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+.main-childs{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
 }
-.container-4 button.icon{
-  -webkit-border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -moz-border-radius-bottomright: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border: none;
-  background: #232833;
-  height: 50px;
-  width: 50px;
-  color: #4f5b66;
-  opacity: 0;
-  font-size: 10pt;
-  -webkit-transition: all .55s ease;
-  -moz-transition: all .55s ease;
-  -ms-transition: all .55s ease;
-  -o-transition: all .55s ease;
-  transition: all .55s ease;
+.child{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    width: 50%;
 }
-.container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
-  outline: none;
-  opacity: 1;
-  margin-left: -50px;
+.child h1{
+    place-self: start;
 }
-.container-4:hover button.icon:hover{
-  background: white;
+.child span{
+    place-self: start;
+    font-weight: 100;
 }
+.form-bar{
+    height: 75px;
+    width: 50vw;
+    display: flex;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+}
+.form-bar-1{
+    flex: 10;
+}
+.form-bar-2{
+    flex: 1;
+    background-color: #00ADB5;
+    border-radius: 0px 50px 50px 0px;
+}
+.form-bar-2:hover{
+    cursor:pointer;
+}
+.form-bar-3{
+    flex: 1;
+    border-radius: 50px 0px 0px 50px;
+}
+/* ---------- Body End ---------- */
+/* ---------- Footer ---------- */
+#footer{
+    height: 90px;
+    width: 100%;
+    margin-top: 0%;
+    background-color: #00ADB5;
+    color: white;
+    font-weight: lighter;
+    position: fixed;
+}
+#footer-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ---------- Footer End ---------- */
