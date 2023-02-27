@@ -4,14 +4,19 @@
         <div id="main-container">
             <div class="main-childs child">
                 <h1> Resources for <u> Developers, </u> <br> By <u> Developers </u> </h1>
-                    <span> Search any term related to code world here! </span>
-                <form action="">
+                <span> Search any term related to code world here! </span>
+                {{!-- <form> --}}
                     <div class="form-bar">
                         <div class="form-bar-3"></div>
-                        <input class="form-bar-1">
-                        <input type="submit" value="" class="form-bar-2">
+                        <input class="form-bar-1" id="search">
+                        <button class="form-bar-2" onclick="buscar()"></button>
                     </div>
-                </form>
+                    {{!--
+                </form> --}}
+                <center>
+                    <h2>Terms lately searched:</h2>
+                </center>
+                <div class="element"></div>
             </div>
         </div>
     </div>
