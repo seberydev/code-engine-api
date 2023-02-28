@@ -7,6 +7,11 @@ a{
     text-decoration: none;
     color: white;
 }
+button{
+    outline: none;
+    border: none;
+    font-size: larger;
+}
 input{
     outline: none;
     border: none;
@@ -33,6 +38,14 @@ input{
     display: flex;
     justify-content: center;
 }
+.headers-list{
+    padding: 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.headers-list:hover{
+    background-color:#222831;
+}
 .logo{
     max-width: 100px;
     max-height: 100px;
@@ -54,12 +67,25 @@ input{
 /* ---------- Body ---------- */
 #body{
     background-color: #222831;
-    height: 75vh;
+    height: 100%;
+}
+#body2{
+    background-color: #222831;
+    height: 87vh;
 }
 #main{
     height: 100%;
     width: 100%;
     color: white;
+}
+#main2{
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #main-container{
     height: 100%;
@@ -69,10 +95,8 @@ input{
     justify-content: center;
 }
 .main-childs{
-    height: 100px;
-    width: 100%;
+    margin: 5%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     gap: 50px;
 }
@@ -106,22 +130,81 @@ input{
     border-radius: 0px 50px 50px 0px;
 }
 .form-bar-2:hover{
+    background-color:#00969e;
+    transition: 0.3s;
+}
+.form-bar-2:hover{
     cursor:pointer;
 }
 .form-bar-3{
     flex: 1;
     border-radius: 50px 0px 0px 50px;
 }
+.element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px white;
+    border-style:dashed;
+    height: 200px;
+    width: 50vw;
+    overflow-y:auto;
+}
+#form-img{
+    max-height: 30px;
+}
+.element p {
+    border-bottom: white 1px solid;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px rgba(255, 255, 255, 0.534) dashed;
+}
+#elements{
+    width: 100%;
+    height: 300px;
+    background-color: #393E46;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#elements-container{
+margin: 10px;
+}
+#elements-container h2{
+    font-size: small;
+}
+#divRes{
+    width: 80vw;
+}
+#divRes h3{
+    font-weight: 200;
+    margin: 10px;
+}
+#main2 button{
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color:#00ADB5;
+    color: white;
+}
+#main2 button:hover{
+    background-color:#00969e;
+}
+#divRes h1{
+    font-weight: bold;
+    margin: 10px;
+}
 /* ---------- Body End ---------- */
 /* ---------- Footer ---------- */
 #footer{
     height: 90px;
     width: 100%;
-    margin-top: 0%;
     background-color: #00ADB5;
     color: white;
-    font-weight: lighter;
-    position: fixed;
+    font-weight:bold;
 }
 #footer-container{
     height: 100%;
