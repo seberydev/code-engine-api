@@ -1,7 +1,7 @@
 // ELEMENTOS -----------------------------------------------------------
-let termToSearch = document.querySelector("#search")
+let termToSearch = document.querySelector("#search");
 let div = document.querySelector(".element");
-let divRes = document.querySelector("#divRes")
+let divRes = document.querySelector("#divRes");
 
 // FUNCIONES -----------------------------------------------------------
 // MUESTRA BÚSQUEDAS HECHAS ANTERIORMENTE
@@ -22,7 +22,7 @@ function buscar() {
   // Obtener el valor del campo de búsqueda
   var mi_texto = termToSearch.value;
 
-  if (mi_texto != '') {
+  if (mi_texto != "") {
     // Obtener la lista de búsquedas almacenadas en localStorage
     var busquedas = JSON.parse(localStorage.getItem("busquedas")) || [];
 
@@ -41,42 +41,46 @@ function buscar() {
       localStorage.setItem("busquedas", JSON.stringify(busquedas));
     }
 
-    getTerm(mi_texto)
-    window.location.href = 'http://localhost:3000/mysearchs';
+    getTerm(mi_texto);
   }
 }
 
 function getTerm(term) {
-  fetch(`http://localhost:3000/api/search?search=${term}`)
-    .then((data) => data.json()
-      .then((d) => {
-        localStorage.setItem('search', JSON.stringify(d[0]))
-      })
-      .catch((err) => console.log(err)))
-    .catch((err) => { console.log(err) })
+  fetch(`${window.location.href}api/search?search=${term}`)
+    .then((data) =>
+      data
+        .json()
+        .then((d) => {
+          localStorage.setItem("search", JSON.stringify(d[0]));
+          window.location.href = `${window.location.href}mysearchs`;
+        })
+        .catch((err) => console.log(err))
+    )
+    .catch((err) => {
+      console.log(err);
+    });
 }
 
 function showRes() {
-  divRes.innerHTML = ''
+  divRes.innerHTML = "";
 
-  let searchRes = localStorage.getItem('search')
-  if (searchRes == 'undefined') {
+  let searchRes = localStorage.getItem("search");
+  if (searchRes == "undefined") {
     let err = document.createElement("h3");
     err.innerHTML = "Error: término buscado no encontrado";
     divRes.appendChild(err);
-  }
-  else {
-    searchRes = JSON.parse(searchRes)
+  } else {
+    searchRes = JSON.parse(searchRes);
     let title = document.createElement("h1");
     title.innerHTML = searchRes.term;
     divRes.appendChild(title);
     let def = document.createElement("h3");
     def.innerHTML = searchRes.meaning;
     divRes.appendChild(def);
-    console.log(searchRes)
+    console.log(searchRes);
   }
 }
 
 // MANDA LLAMAR FUNCIÓN CUANDO PÁGINA CARGA
-if (termToSearch) showSearches()
-if (divRes) showRes()
+if (termToSearch) showSearches();
+if (divRes) showRes();
