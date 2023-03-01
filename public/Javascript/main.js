@@ -1,4 +1,3 @@
-// ELEMENTOS -----------------------------------------------------------
 let termToSearch = document.querySelector("#search");
 let div = document.querySelector(".element");
 let divRes = document.querySelector("#divRes");

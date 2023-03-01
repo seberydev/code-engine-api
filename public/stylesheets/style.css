@@ -25,6 +25,13 @@ input{
     width: 100%;
     font-weight: lighter;
 }
+#header2{
+    background-color: #393E46;
+    height: 90px;
+    width: 100%;
+    font-weight: lighter;
+    position: fixed;
+}
 #header-container{
     width: 100%;
     height: 100%;
@@ -71,7 +78,7 @@ input{
 }
 #body2{
     background-color: #222831;
-    height: 87vh;
+    height: 100vh;
 }
 #main{
     height: 100%;
@@ -214,3 +221,189 @@ margin: 10px;
     align-items: center;
 }
 /* ---------- Footer End ---------- */
+/* ---------- Responsive shit ---------- */
+
+@media (max-width: 600px) {
+    #header{
+        background-color:#393E46;
+        height: 120px;
+        width: 100%;
+        font-weight: lighter;
+        font-size: 12px;
+    }
+    #header2{
+        background-color:#393E46;
+        height: 90px;
+        width: 100%;
+        font-weight: lighter;
+        position: fixed;
+        font-size: 12px;
+    }
+    .logo{
+        max-width: 50px;
+        max-height: 50px;
+    }
+    .right-header{
+        flex:4;
+        justify-content: center;
+        gap: 5px;
+    }
+    #body2{
+        background-color: #222831;
+        height: 100vh;
+    }
+    #main{
+        height: 100%;
+        width: 100%;
+        color: white;
+    }
+    #main2{
+        height: 100%;
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #main-container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-childs{
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .child{
+        display: flex;
+        align-items: center;
+        flex: 1;
+        width: 75%;
+    }
+    .form-bar{
+        height: 75px;
+        width: 90vw;
+        display: flex;
+        background-color: white;
+        color: black;
+        border-radius: 50px;
+    }
+    .form-bar-1{
+        flex: 2;
+    }
+    .form-bar-2{
+        flex: 1;
+        background-color: #00ADB5;
+        border-radius: 0px 50px 50px 0px;
+    }
+    .element{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px white;
+        border-style:dashed;
+        height: 200px;
+        width: 75vw;
+        overflow-y:auto;
+    }
+    #form-img{
+        max-height: 30px;
+    }
+    #elements{
+        width: 100%;
+        height: 250px;
+        background-color: #393E46;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #elements-container{
+    margin: 10px;
+    }
+}
+@media (min-width: 600px) and  (max-width: 1000px) {
+    #header{
+        background-color: #393E46;
+        height: 120px;
+        width: 100%;
+        font-weight: lighter;
+        font-size: 25px;
+    }
+    #header2{
+        background-color:#393E46;
+        height: 120px;
+        width: 100%;
+        font-weight: lighter;
+        position: fixed;
+        font-size: 25px;
+    }
+    .logo{
+        max-width: 75px;
+        max-height: 75px;
+    }
+    .right-header{
+        flex:4;
+        justify-content: center;
+        gap: 15px;
+    }
+    #main{
+        height: 500px;
+        width: 100%;
+        color: white;
+    }
+    #main-container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-childs{
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+    .form-bar{
+        height: 75px;
+        width: 80vw;
+        display: flex;
+        background-color: white;
+        color: black;
+        border-radius: 50px;
+    }
+    .child h1{
+        place-self: start;
+        font-size: 30px;
+    }
+    #form-img{
+        max-height: 20px;
+    }
+    #elements{
+        width: 100%;
+        height: 400px;
+        background-color: #393E46;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .element{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px white;
+        border-style:dashed;
+        height: 300px;
+        width: 75vw;
+        overflow-y:auto;
+    }
+    #elements-container{
+    margin: 10px;
+    }
+}
