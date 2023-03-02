@@ -1,0 +1,409 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+button{
+    outline: none;
+    border: none;
+    font-size: larger;
+}
+input{
+    outline: none;
+    border: none;
+    font-size: larger;
+}
+/* ---------- Header ---------- */
+
+#header{
+    background-color: #393E46;
+    height: 90px;
+    width: 100%;
+    font-weight: lighter;
+}
+#header2{
+    background-color: #393E46;
+    height: 90px;
+    width: 100%;
+    font-weight: lighter;
+    position: fixed;
+}
+#header-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.headers{
+    list-style: none;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+.headers-list{
+    padding: 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.headers-list:hover{
+    background-color:#222831;
+}
+.logo{
+    max-width: 100px;
+    max-height: 100px;
+}
+.left-header{
+    flex:1;
+}
+.right-header{
+    flex:4;
+    justify-content: start;
+    gap: 50px;
+}
+.headers-list{
+ /* existo por si las dudas*/
+   color: rebeccapurple;
+}
+
+/* ---------- Header End ---------- */
+/* ---------- Body ---------- */
+#body{
+    background-color: #222831;
+    height: 100%;
+}
+#body2{
+    background-color: #222831;
+    height: 100vh;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+#main2{
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#main-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-childs{
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.child{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    width: 50%;
+}
+.child h1{
+    place-self: start;
+}
+.child span{
+    place-self: start;
+    font-weight: 100;
+}
+.form-bar{
+    height: 75px;
+    width: 50vw;
+    display: flex;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+}
+.form-bar-1{
+    flex: 10;
+}
+.form-bar-2{
+    flex: 1;
+    background-color: #00ADB5;
+    border-radius: 0px 50px 50px 0px;
+}
+.form-bar-2:hover{
+    background-color:#00969e;
+    transition: 0.3s;
+}
+.form-bar-2:hover{
+    cursor:pointer;
+}
+.form-bar-3{
+    flex: 1;
+    border-radius: 50px 0px 0px 50px;
+}
+.element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px white;
+    border-style:dashed;
+    height: 200px;
+    width: 50vw;
+    overflow-y:auto;
+}
+#form-img{
+    max-height: 30px;
+}
+.element p {
+    border-bottom: white 1px solid;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px rgba(255, 255, 255, 0.534) dashed;
+}
+#elements{
+    width: 100%;
+    height: 300px;
+    background-color: #393E46;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#elements-container{
+margin: 10px;
+}
+#elements-container h2{
+    font-size: small;
+}
+#divRes{
+    width: 80vw;
+}
+#divRes h3{
+    font-weight: 200;
+    margin: 10px;
+}
+#main2 button{
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color:#00ADB5;
+    color: white;
+}
+#main2 button:hover{
+    background-color:#00969e;
+}
+#divRes h1{
+    font-weight: bold;
+    margin: 10px;
+}
+/* ---------- Body End ---------- */
+/* ---------- Footer ---------- */
+#footer{
+    height: 90px;
+    width: 100%;
+    background-color: #00ADB5;
+    color: white;
+    font-weight:bold;
+}
+#footer-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ---------- Footer End ---------- */
+/* ---------- Responsive shit ---------- */
+
+@media (max-width: 600px) {
+    #header{
+        background-color:#393E46;
+        height: 120px;
+        width: 100%;
+        font-weight: lighter;
+        font-size: 12px;
+    }
+    #header2{
+        background-color:#393E46;
+        height: 90px;
+        width: 100%;
+        font-weight: lighter;
+        position: fixed;
+        font-size: 12px;
+    }
+    .logo{
+        max-width: 50px;
+        max-height: 50px;
+    }
+    .right-header{
+        flex:4;
+        justify-content: center;
+        gap: 5px;
+    }
+    #body2{
+        background-color: #222831;
+        height: 100vh;
+    }
+    #main{
+        height: 50vh;
+        width: 100%;
+        color: white;
+    }
+    #main2{
+        height: 100%;
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #main-container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-childs{
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .child{
+        display: flex;
+        align-items: center;
+        flex: 1;
+        width: 75%;
+    }
+    .form-bar{
+        height: 75px;
+        width: 90vw;
+        display: flex;
+        background-color: white;
+        color: black;
+        border-radius: 50px;
+    }
+    .form-bar-1{
+        flex: 2;
+    }
+    .form-bar-2{
+        flex: 1;
+        background-color: #00ADB5;
+        border-radius: 0px 50px 50px 0px;
+    }
+    .element{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px white;
+        border-style:dashed;
+        height: 200px;
+        width: 75vw;
+        overflow-y:auto;
+    }
+    #form-img{
+        max-height: 30px;
+    }
+    #elements{
+        width: 100%;
+        height: 250px;
+        background-color: #393E46;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #elements-container{
+    margin: 10px;
+    }
+}
+@media (min-width: 600px) and  (max-width: 1000px) {
+    #header{
+        background-color: #393E46;
+        height: 120px;
+        width: 100%;
+        font-weight: lighter;
+        font-size: 25px;
+    }
+    #header2{
+        background-color:#393E46;
+        height: 120px;
+        width: 100%;
+        font-weight: lighter;
+        position: fixed;
+        font-size: 25px;
+    }
+    .logo{
+        max-width: 75px;
+        max-height: 75px;
+    }
+    .right-header{
+        flex:4;
+        justify-content: center;
+        gap: 15px;
+    }
+    #main{
+        height: 500px;
+        width: 100%;
+        color: white;
+    }
+    #main-container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-childs{
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+    .form-bar{
+        height: 75px;
+        width: 80vw;
+        display: flex;
+        background-color: white;
+        color: black;
+        border-radius: 50px;
+    }
+    .child h1{
+        place-self: start;
+        font-size: 30px;
+    }
+    #form-img{
+        max-height: 20px;
+    }
+    #elements{
+        width: 100%;
+        height: 400px;
+        background-color: #393E46;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .element{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px white;
+        border-style:dashed;
+        height: 300px;
+        width: 75vw;
+        overflow-y:auto;
+    }
+    #elements-container{
+    margin: 10px;
+    }
+}
